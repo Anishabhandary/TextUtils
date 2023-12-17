@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 
 export default function TextForm(props) {
-  // const minimize = (words) => {
-  //   if (words === "") {
-  //     return 0;
-  //   } else {
-  //     return words;
-  //   }
-  // };
   const handleUpClick = () => {
     let newText = text.toUpperCase();
     setText(newText);

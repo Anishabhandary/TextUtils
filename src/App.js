@@ -5,6 +5,8 @@ import React, { useState } from "react";
 import TextForm from "./components/TextForm";
 import Alert from "./components/Alert";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./components/Login";
+import Registration from "./components/Registration";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -51,6 +53,12 @@ function App() {
               }
             ></Route>
             <Route exact path="/about" element={<About mode={mode} />}></Route>
+            <Route exact path="/login" element={<Login mode={mode} />}></Route>
+            <Route
+              exact
+              path="/register"
+              element={<Registration mode={mode} showAlert={showAlert} />}
+            ></Route>
           </Routes>
         </div>
       </Router>

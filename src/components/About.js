@@ -1,23 +1,6 @@
 import React from "react";
 
 export default function About(props) {
-  // const [myStyle, setMyStyle] = useState({
-  //   color: "black",
-  //   backgroundColor: "white",
-  // });
-  // const [myBtn, setMyBtn] = useState("Enable Dark Mode");
-  // const toggleStyle = () => {
-  //   if (myStyle.color === "black") {
-  //     setMyStyle({ color: "white", backgroundColor: "black" });
-  //     setMyBtn("Enable Light Mode");
-  //   } else {
-  //     setMyStyle({
-  //       color: "black",
-  //       backgroundColor: "white",
-  //     });
-  //     setMyBtn("Enable Dark Mode");
-  //   }
-  // };
   const cl = "white";
   return (
     <div
@@ -51,7 +34,6 @@ export default function About(props) {
             <div
               className="accordion-body"
               style={{ color: props.mode === "light" ? "black" : "white" }}
-              /*style={myStyle}*/
             >
               <strong>This is the first item's accordion body.</strong> It is
               shown by default, until the collapse plugin adds the appropriate
@@ -89,7 +71,7 @@ export default function About(props) {
           >
             <div
               className="accordion-body"
-              /*style={myStyle}*/ style={{
+              style={{
                 color: props.mode === "light" ? "black" : "white",
               }}
             >
@@ -110,7 +92,6 @@ export default function About(props) {
               className="accordion-button collapsed bg-secondary"
               type="button"
               style={{ color: cl }}
-              // style={myStyle}
               data-bs-toggle="collapse"
               data-bs-target="#collapseThree"
               aria-expanded="false"
@@ -128,7 +109,7 @@ export default function About(props) {
             }}
           >
             <div
-              className="accordion-body" /*style={myStyle}*/
+              className="accordion-body"
               style={{ color: props.mode === "light" ? "black" : "white" }}
             >
               <strong>This is the third item's accordion body.</strong> It is
@@ -143,9 +124,6 @@ export default function About(props) {
           </div>
         </div>
       </div>
-      {/* <button className="btn btn-primary my-3" onClick={toggleStyle}>
-        {myBtn}
-      </button> */}
     </div>
   );
 }
